@@ -1,15 +1,24 @@
-import React, { useState } from 'react'
-import { Text, View } from "react-native"
-import './App.css'
+import React from 'react'
+import { Text, View, ViewStyle } from "react-native"
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <View style={{ flex: 1, width: '100vw', height: '100vh', justifyContent: 'center', alignItems: 'center', backgroundColor: "red" }}>
+    <View style={styles.container}>
       <Text>Hello World</Text>
     </View>
   )
 }
 
-export default App
+const styles = {
+  container: {
+    flex: 1,
+    width: '100vw',
+    height: '100vh',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: "red"
+  } as ViewStyle
+}
+
+export { App }
+
